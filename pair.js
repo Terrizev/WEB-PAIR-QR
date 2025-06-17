@@ -90,7 +90,7 @@ router.get('/', async (req, res) => {
 
                         const Scan_Id = Id_session;
 
-                        let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
+                        let msgsss = await Smd.sendMessage(user, { text: '𝙾𝚁𝙼𝙰𝙽~𝚇𝙼𝙳~' + Scan_Id });
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
                         await delay(1000);
                         try { await fs.emptyDirSync(__dirname + '/auth_info_baileys'); } catch (e) {}
